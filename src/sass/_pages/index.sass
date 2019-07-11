@@ -121,6 +121,7 @@
 							&:after
 								height: 100%
 								opacity: 1
+// Button-click style
 .button-click
 	background: #5FBFF9
 	padding: 2rem 0
@@ -139,29 +140,249 @@
 					text-transform: uppercase
 					font-weight: bold
 					color: white
-					font-size: 1.2rem					
-					transition: .2s all ease-in-out
+					font-size: 1.2rem
 					z-index: 1
-					box-shadow: 0 10px #171d1ca3
+					box-shadow: 0 10px #171d1c82
 					position: relative
 					&.one
-						border-bottom-left-radius: 5px
-						border-bottom-right-radius: 5px
+						border-radius: 5px
 					&.two
-						border-bottom-left-radius: 5px
-						border-bottom-right-radius: 5px
+						border-radius: 5px
+					&.three 
+						border-radius: 5px
+						box-shadow: -10px 0 #171d1c82
+					&.four
+						border-radius: 5px
+						box-shadow: 10px 0 #171d1c82
+					&.five
+						border-radius: 50px
+					&.six
+						border-radius: 30px
+					&.seven, &.eight
+						border-radius: 50%
+						width: 30%
 					&:hover
 						&.one
 							transform: translateY(10%)
-							box-shadow: 0 5px #171d1ca3
+							box-shadow: 0 5px #171d1c82
 						&.two
 							transform: translateY(5%)
-							box-shadow: 0 8px #171d1ca3
+							box-shadow: 0 8px #171d1c82
+						&.three
+							transform: translateX(-3%)
+							box-shadow: -5px 0 #171d1c82
+						&.four
+							transform: translateX(3%)
+							box-shadow: 5px 0 #171d1c82
+						&.five
+							transform: translateY(10%)
+							box-shadow: 0 5px #171d1c82
+						&.six
+							transform: translateY(5%)
+							box-shadow: 0 8px #171d1c82
+						&.seven
+							transform: translateY(10%)
+							box-shadow: 0 5px #171d1c82
+						&.eight
+							transform: translateY(5%)
+							box-shadow: 0 8px #171d1c82
 					&:active
 						&.one
 							transform: translateY(15%)
-							box-shadow: 0 0 #171d1ca3
+							box-shadow: 0 0 #171d1c82
 						&.two
 							transform: translateY(15%)
-							box-shadow: 0 0px #171d1ca3
-
+							box-shadow: 0 0px #171d1c82
+						&.three
+							transform: translateX(-4%)
+							box-shadow: 0px 0 #171d1c82
+						&.four
+							transform: translateX(4%)
+							box-shadow: 0px 0 #171d1c82
+						&.five
+							transform: translateY(15%)
+							box-shadow: 0 0 #171d1c82
+						&.six
+							transform: translateY(15%)
+							box-shadow: 0 0px #171d1c82
+						&.seven
+							transform: translateY(15%)
+							box-shadow: 0 0 #171d1c82
+						&.eight
+							transform: translateY(15%)
+							box-shadow: 0 0px #171d1c82
+// Button-font style
+.button-font
+	background: #16BAC5
+	padding: 2rem 0
+	.container
+		.row
+			.col-md-6, .col-md-12
+				display: flex
+				justify-content: center
+				padding: 1rem 4rem
+				.button-font
+					outline: none
+					border: none
+					background: #5FBFF9
+					text-transform: uppercase
+					color: white
+					width: 70%
+					font-size: 1.2rem
+					font-weight: bold
+					padding: 0
+					height: 4rem
+					transition: .1s all ease-in-out
+					overflow: hidden
+					border-radius: 10px
+					&.add-to-cart
+						.row
+							height: 100%
+							.col-lg-3 
+								display: flex
+								justify-content: center
+								align-items: center
+								background: #2980b9
+								padding: 0
+								transition: .5s all ease-in-out
+								.fas
+									padding: 5px
+							.col-lg-9
+								display: flex
+								justify-content: center
+								align-items: center
+								padding: 0
+								background: #5FBFF9
+								transition: .5s all ease-in-out
+								.cart
+									padding: 5px
+					&.star
+						.row
+							height: 100%
+							.col-lg-3 
+								display: flex
+								justify-content: center
+								align-items: center
+								padding: 0
+								transition: .5s all ease-in-out
+								@media only screen and (min-width: 1024px)
+									border-right: 1px solid white
+							.col-lg-9
+								display: flex
+								justify-content: center
+								align-items: center
+								padding: 0
+								transition: .5s all ease-in-out
+					&.heart
+						width: 25%
+						height: 8rem
+						.row
+							height: 100%
+							.col-12
+								padding: 1rem 0 
+								&.heart
+									background: #2980b9
+					&.cog
+						.row
+							height: 100%
+							.col-lg-3
+								display: flex
+								justify-content: center
+								align-items: center
+								background: #2980b9
+								position: relative
+								@media only screen and (min-width: 1024px)
+									&:after
+										display: block
+										content: ''
+										position: absolute
+										top: 50%
+										right: 0
+										width: 20px
+										height: 20px
+										transform: translate(50%,-50%) rotate(45deg)
+										background: #2980b9
+										transition: .5s all ease-in-out
+								.fas
+									padding: 5px 
+							.col-lg-9
+								display: flex
+								justify-content: center
+								align-items: center
+								.setting
+									padding: 5px
+					&.send
+						z-index: 1
+						position: relative
+						@media only screen and (min-width: 1024px)
+							&:after
+								display: block
+								content: ''
+								position: absolute
+								top: 0
+								right: 0
+								width: 40%
+								height: 500%
+								background: #2980b9
+								z-index: -1
+								transform: rotate(-30deg) translate(100%,-30%)
+								transition: .5s all ease-in-out
+						.row
+							height: 100%
+							.col-lg-3
+								display: flex
+								justify-content: center
+								align-items: center
+								@media only screen and (max-width: 1024px)
+									background: #2980b9
+								.fas
+									padding: 5px
+							.col-lg-9
+								display: flex
+								justify-content: center
+								align-items: center
+								.send
+									padding: 5px
+					&:hover
+						&.add-to-cart
+							.row
+								.col-lg-3
+									background: #12467b
+								.col-lg-9
+									background: #529ac5
+						&.star
+							background: #50a2d4
+						&.heart
+							background: #50a2d4
+						&.cog 
+							background: #50a2d4
+						&.send
+							background: #50a2d4
+							&:after
+								transform: rotate(-30deg) translate(80%,-30%)
+					&:active
+						&.add-to-cart
+							transform: translateY(10%)
+							.row
+								.col-lg-3
+									background: #07284a
+								.col-lg-9
+									background: #508ac0
+						&.star
+							transform: translateY(10%)
+							background: #4090c4
+						&.heart
+							background: #2070b0
+							transform: translateY(10%)
+						&.cog
+							background: #2070b0
+							.row
+								.col-lg-3
+									&:after
+										height: 30px
+										width: 30px
+						&.send
+							background: #2070b0
+							transform: translateY(10%)
+							&:after
+								transform: rotate(-30deg) translate(70%,-30%)

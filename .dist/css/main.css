@@ -128,25 +128,236 @@
       font-weight: bold;
       color: white;
       font-size: 1.2rem;
-      transition: .2s all ease-in-out;
       z-index: 1;
-      box-shadow: 0 10px #171d1ca3;
+      box-shadow: 0 10px #171d1c82;
       position: relative; }
       .button-click .container .row .col-md-6 .button-click.one {
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px; }
+        border-radius: 5px; }
       .button-click .container .row .col-md-6 .button-click.two {
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px; }
+        border-radius: 5px; }
+      .button-click .container .row .col-md-6 .button-click.three {
+        border-radius: 5px;
+        box-shadow: -10px 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click.four {
+        border-radius: 5px;
+        box-shadow: 10px 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click.five {
+        border-radius: 50px; }
+      .button-click .container .row .col-md-6 .button-click.six {
+        border-radius: 30px; }
+      .button-click .container .row .col-md-6 .button-click.seven, .button-click .container .row .col-md-6 .button-click.eight {
+        border-radius: 50%;
+        width: 30%; }
       .button-click .container .row .col-md-6 .button-click:hover.one {
         transform: translateY(10%);
-        box-shadow: 0 5px #171d1ca3; }
+        box-shadow: 0 5px #171d1c82; }
       .button-click .container .row .col-md-6 .button-click:hover.two {
         transform: translateY(5%);
-        box-shadow: 0 8px #171d1ca3; }
+        box-shadow: 0 8px #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:hover.three {
+        transform: translateX(-3%);
+        box-shadow: -5px 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:hover.four {
+        transform: translateX(3%);
+        box-shadow: 5px 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:hover.five {
+        transform: translateY(10%);
+        box-shadow: 0 5px #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:hover.six {
+        transform: translateY(5%);
+        box-shadow: 0 8px #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:hover.seven {
+        transform: translateY(10%);
+        box-shadow: 0 5px #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:hover.eight {
+        transform: translateY(5%);
+        box-shadow: 0 8px #171d1c82; }
       .button-click .container .row .col-md-6 .button-click:active.one {
         transform: translateY(15%);
-        box-shadow: 0 0 #171d1ca3; }
+        box-shadow: 0 0 #171d1c82; }
       .button-click .container .row .col-md-6 .button-click:active.two {
         transform: translateY(15%);
-        box-shadow: 0 0px #171d1ca3; }
+        box-shadow: 0 0px #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:active.three {
+        transform: translateX(-4%);
+        box-shadow: 0px 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:active.four {
+        transform: translateX(4%);
+        box-shadow: 0px 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:active.five {
+        transform: translateY(15%);
+        box-shadow: 0 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:active.six {
+        transform: translateY(15%);
+        box-shadow: 0 0px #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:active.seven {
+        transform: translateY(15%);
+        box-shadow: 0 0 #171d1c82; }
+      .button-click .container .row .col-md-6 .button-click:active.eight {
+        transform: translateY(15%);
+        box-shadow: 0 0px #171d1c82; }
+
+.button-font {
+  background: #16BAC5;
+  padding: 2rem 0; }
+  .button-font .container .row .col-md-6, .button-font .container .row .col-md-12 {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 4rem; }
+    .button-font .container .row .col-md-6 .button-font, .button-font .container .row .col-md-12 .button-font {
+      outline: none;
+      border: none;
+      background: #5FBFF9;
+      text-transform: uppercase;
+      color: white;
+      width: 70%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0;
+      height: 4rem;
+      transition: .1s all ease-in-out;
+      overflow: hidden;
+      border-radius: 10px; }
+      .button-font .container .row .col-md-6 .button-font.add-to-cart .row, .button-font .container .row .col-md-12 .button-font.add-to-cart .row {
+        height: 100%; }
+        .button-font .container .row .col-md-6 .button-font.add-to-cart .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.add-to-cart .row .col-lg-3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #2980b9;
+          padding: 0;
+          transition: .5s all ease-in-out; }
+          .button-font .container .row .col-md-6 .button-font.add-to-cart .row .col-lg-3 .fas, .button-font .container .row .col-md-12 .button-font.add-to-cart .row .col-lg-3 .fas {
+            padding: 5px; }
+        .button-font .container .row .col-md-6 .button-font.add-to-cart .row .col-lg-9, .button-font .container .row .col-md-12 .button-font.add-to-cart .row .col-lg-9 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          background: #5FBFF9;
+          transition: .5s all ease-in-out; }
+          .button-font .container .row .col-md-6 .button-font.add-to-cart .row .col-lg-9 .cart, .button-font .container .row .col-md-12 .button-font.add-to-cart .row .col-lg-9 .cart {
+            padding: 5px; }
+      .button-font .container .row .col-md-6 .button-font.star .row, .button-font .container .row .col-md-12 .button-font.star .row {
+        height: 100%; }
+        .button-font .container .row .col-md-6 .button-font.star .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.star .row .col-lg-3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          transition: .5s all ease-in-out; }
+          @media only screen and (min-width: 1024px) {
+            .button-font .container .row .col-md-6 .button-font.star .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.star .row .col-lg-3 {
+              border-right: 1px solid white; } }
+        .button-font .container .row .col-md-6 .button-font.star .row .col-lg-9, .button-font .container .row .col-md-12 .button-font.star .row .col-lg-9 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          transition: .5s all ease-in-out; }
+      .button-font .container .row .col-md-6 .button-font.heart, .button-font .container .row .col-md-12 .button-font.heart {
+        width: 25%;
+        height: 8rem; }
+        .button-font .container .row .col-md-6 .button-font.heart .row, .button-font .container .row .col-md-12 .button-font.heart .row {
+          height: 100%; }
+          .button-font .container .row .col-md-6 .button-font.heart .row .col-12, .button-font .container .row .col-md-12 .button-font.heart .row .col-12 {
+            padding: 1rem 0; }
+            .button-font .container .row .col-md-6 .button-font.heart .row .col-12.heart, .button-font .container .row .col-md-12 .button-font.heart .row .col-12.heart {
+              background: #2980b9; }
+      .button-font .container .row .col-md-6 .button-font.cog .row, .button-font .container .row .col-md-12 .button-font.cog .row {
+        height: 100%; }
+        .button-font .container .row .col-md-6 .button-font.cog .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.cog .row .col-lg-3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #2980b9;
+          position: relative; }
+          @media only screen and (min-width: 1024px) {
+            .button-font .container .row .col-md-6 .button-font.cog .row .col-lg-3:after, .button-font .container .row .col-md-12 .button-font.cog .row .col-lg-3:after {
+              display: block;
+              content: '';
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: 20px;
+              height: 20px;
+              transform: translate(50%, -50%) rotate(45deg);
+              background: #2980b9;
+              transition: .5s all ease-in-out; } }
+          .button-font .container .row .col-md-6 .button-font.cog .row .col-lg-3 .fas, .button-font .container .row .col-md-12 .button-font.cog .row .col-lg-3 .fas {
+            padding: 5px; }
+        .button-font .container .row .col-md-6 .button-font.cog .row .col-lg-9, .button-font .container .row .col-md-12 .button-font.cog .row .col-lg-9 {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .button-font .container .row .col-md-6 .button-font.cog .row .col-lg-9 .setting, .button-font .container .row .col-md-12 .button-font.cog .row .col-lg-9 .setting {
+            padding: 5px; }
+      .button-font .container .row .col-md-6 .button-font.send, .button-font .container .row .col-md-12 .button-font.send {
+        z-index: 1;
+        position: relative; }
+        @media only screen and (min-width: 1024px) {
+          .button-font .container .row .col-md-6 .button-font.send:after, .button-font .container .row .col-md-12 .button-font.send:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 500%;
+            background: #2980b9;
+            z-index: -1;
+            transform: rotate(-30deg) translate(100%, -30%);
+            transition: .5s all ease-in-out; } }
+        .button-font .container .row .col-md-6 .button-font.send .row, .button-font .container .row .col-md-12 .button-font.send .row {
+          height: 100%; }
+          .button-font .container .row .col-md-6 .button-font.send .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.send .row .col-lg-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            @media only screen and (max-width: 1024px) {
+              .button-font .container .row .col-md-6 .button-font.send .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.send .row .col-lg-3 {
+                background: #2980b9; } }
+            .button-font .container .row .col-md-6 .button-font.send .row .col-lg-3 .fas, .button-font .container .row .col-md-12 .button-font.send .row .col-lg-3 .fas {
+              padding: 5px; }
+          .button-font .container .row .col-md-6 .button-font.send .row .col-lg-9, .button-font .container .row .col-md-12 .button-font.send .row .col-lg-9 {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .button-font .container .row .col-md-6 .button-font.send .row .col-lg-9 .send, .button-font .container .row .col-md-12 .button-font.send .row .col-lg-9 .send {
+              padding: 5px; }
+      .button-font .container .row .col-md-6 .button-font:hover.add-to-cart .row .col-lg-3, .button-font .container .row .col-md-12 .button-font:hover.add-to-cart .row .col-lg-3 {
+        background: #12467b; }
+      .button-font .container .row .col-md-6 .button-font:hover.add-to-cart .row .col-lg-9, .button-font .container .row .col-md-12 .button-font:hover.add-to-cart .row .col-lg-9 {
+        background: #529ac5; }
+      .button-font .container .row .col-md-6 .button-font:hover.star, .button-font .container .row .col-md-12 .button-font:hover.star {
+        background: #50a2d4; }
+      .button-font .container .row .col-md-6 .button-font:hover.heart, .button-font .container .row .col-md-12 .button-font:hover.heart {
+        background: #50a2d4; }
+      .button-font .container .row .col-md-6 .button-font:hover.cog, .button-font .container .row .col-md-12 .button-font:hover.cog {
+        background: #50a2d4; }
+      .button-font .container .row .col-md-6 .button-font:hover.send, .button-font .container .row .col-md-12 .button-font:hover.send {
+        background: #50a2d4; }
+        .button-font .container .row .col-md-6 .button-font:hover.send:after, .button-font .container .row .col-md-12 .button-font:hover.send:after {
+          transform: rotate(-30deg) translate(80%, -30%); }
+      .button-font .container .row .col-md-6 .button-font:active.add-to-cart, .button-font .container .row .col-md-12 .button-font:active.add-to-cart {
+        transform: translateY(10%); }
+        .button-font .container .row .col-md-6 .button-font:active.add-to-cart .row .col-lg-3, .button-font .container .row .col-md-12 .button-font:active.add-to-cart .row .col-lg-3 {
+          background: #07284a; }
+        .button-font .container .row .col-md-6 .button-font:active.add-to-cart .row .col-lg-9, .button-font .container .row .col-md-12 .button-font:active.add-to-cart .row .col-lg-9 {
+          background: #508ac0; }
+      .button-font .container .row .col-md-6 .button-font:active.star, .button-font .container .row .col-md-12 .button-font:active.star {
+        transform: translateY(10%);
+        background: #4090c4; }
+      .button-font .container .row .col-md-6 .button-font:active.heart, .button-font .container .row .col-md-12 .button-font:active.heart {
+        background: #2070b0;
+        transform: translateY(10%); }
+      .button-font .container .row .col-md-6 .button-font:active.cog, .button-font .container .row .col-md-12 .button-font:active.cog {
+        background: #2070b0; }
+        .button-font .container .row .col-md-6 .button-font:active.cog .row .col-lg-3:after, .button-font .container .row .col-md-12 .button-font:active.cog .row .col-lg-3:after {
+          height: 30px;
+          width: 30px; }
+      .button-font .container .row .col-md-6 .button-font:active.send, .button-font .container .row .col-md-12 .button-font:active.send {
+        background: #2070b0;
+        transform: translateY(10%); }
+        .button-font .container .row .col-md-6 .button-font:active.send:after, .button-font .container .row .col-md-12 .button-font:active.send:after {
+          transform: rotate(-30deg) translate(70%, -30%); }
