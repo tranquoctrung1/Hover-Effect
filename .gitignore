@@ -1,0 +1,7 @@
+
+
+####### Các file khi post lên git ko hiển thị ##############
+
+/bower_components
+/node_modules
+/package-lock.json

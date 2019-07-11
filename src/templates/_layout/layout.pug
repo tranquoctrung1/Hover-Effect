@@ -1,0 +1,47 @@
+include ../_include/_variables
+doctype html
+html(dir='ltr', lang="en", itemscope, itemtype="http://schema.org/WebSite", prefix="og: http://ogp.me/ns#", class="no-js")
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		meta(name='format-detection', content='telephone=no')
+		meta(name='msapplication-tap-highlight', content='no')
+		<!-- ////////////// Mobile title color ////////////// -->
+		meta(name='theme-color', content="#000000")
+		meta(name='msapplication-navbutton-color', content="#000000")
+		meta(name='apple-mobile-web-app-status-bar-style', content="#000000")
+		title #{title || AppName}
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=vietnamese" rel="stylesheet")
+		include ../_include/_seo
+		<!-- ////////////// CSS Include ////////////// -->
+		include ../_include/_css
+		block css
+		<!-- ////////////// FAVICON ////////////// -->
+		link(rel='apple-touch-icon', sizes='180x180', href="./favicon/"+'apple-touch-icon.png')
+		link(rel='icon', type='image/png', href="./favicon/"+'favicon-32x32.png', sizes='32x32')
+		link(rel='icon', type='image/png', href="./favicon/"+'favicon-16x16.png', sizes='16x16')
+		link(rel='manifest', href="./favicon/"+'manifest.json')
+		link(rel='mask-icon', href="./favicon/"+'safari-pinned-tab.svg', color='#5bbad5')
+		link(rel='shortcut icon', href="./favicon/"+'favicon.ico')
+		meta(name='msapplication-TileColor', content="#000000")
+		meta(name='msapplication-TileImage', content="./favicon/"+'mstile-144x144.png')
+		meta(name='msapplication-config', content="./favicon/"+'browserconfig.xml')
+		meta(name='theme-color', content='#ffffff')
+	body#top-page(class=bodyclass+'-page' || 'default')
+		<!-- ////////////// Header ////////////// -->
+		include header
+		<!-- ////////////// End Header ////////////// -->
+		<!-- ////////////// Begin Main ////////////// -->
+		main
+			block body
+		<!-- ////////////// End Main ////////////// -->
+		<!-- ////////////// Footer ////////////// -->
+		include footer
+		#scroll-top(style="background: white; width: 100px; height: 50px; position: fixed; bottom: 10px; right: 10px; text-align:center; border-radius: 10px; opacity: 0")
+			a(href="#top" style="font-size: 30px; color: #2d3436; font-weight: bold; text-decoration: none") Top
+		<!-- ////////////// End Footer ////////////// -->
+		<!-- ////////////// Javascript Include ////////////// -->
+		include ../_include/_js
+		block js
+
