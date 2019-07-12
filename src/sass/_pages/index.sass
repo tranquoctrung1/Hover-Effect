@@ -19,7 +19,7 @@
 					transition: .5s all ease-in-out
 					position: relative
 					z-index: 1
-					overflow: hidden	
+					overflow: hidden
 					&.two
 						&:after
 							display: block
@@ -265,6 +265,7 @@
 								align-items: center
 								padding: 0
 								transition: .5s all ease-in-out
+								background: #2980b9
 								@media only screen and (min-width: 1024px)
 									border-right: 1px solid white
 							.col-lg-9
@@ -275,11 +276,16 @@
 								transition: .5s all ease-in-out
 					&.heart
 						width: 25%
+						@media only screen and (max-width: 767px)
+							width: 70%
+							height: 4rem
 						height: 8rem
 						.row
 							height: 100%
 							.col-12
-								padding: 1rem 0 
+								padding: 1rem 0
+								@media only screen and (max-width: 767px)
+									padding: 0
 								&.heart
 									background: #2980b9
 					&.cog
@@ -386,3 +392,194 @@
 							transform: translateY(10%)
 							&:after
 								transform: rotate(-30deg) translate(70%,-30%)
+// button page style
+.button-page-direction
+	background: #5fbff9
+	padding: 2rem 0
+	.container
+		.row
+			.col-md-6
+				padding: 1rem 4rem
+				display: flex
+				justify-content: center
+				align-items: center
+				.button-page
+					width: 60%
+					@media only screen and (max-width: 1023px)
+						width: 100%
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 1rem
+					padding: 1rem 0
+					color: #EFE9F4
+					background: transparent
+					outline: none
+					border: 2px solid #EFE9F4
+					transition: .5s all ease-in-out
+					position: relative
+					z-index: 1
+					overflow: hidden
+					border-radius: 50px
+					.fas
+						padding: 5px
+						position: absolute
+						font-size: .5rem
+						top: 50%
+						left: 50%
+						transition: .3s all ease-in-out
+						opacity: 0
+					&.one
+						.fas
+							transform: translate(200%,-50%)
+					&.three
+						.fas
+							transform: translate(0%, -45%)
+							right: -10rem
+					&.two
+						.fas
+							transform: translate(-250%,-50%)
+					&.four
+						.fas
+							transform: translate(0%, -45%)
+							left: -5rem
+					&:hover 
+						&.one
+							.fas
+								transform: translate(266%,-50%)
+								opacity: 1
+								font-size: 1.1rem
+						&.two
+							.fas
+								transform: translate(-377%,-50%)
+								opacity: 1
+								font-size: 1.1rem
+						&.three
+							.fas 
+								right: -3rem
+								opacity: 1
+								font-size: 1.1rem
+						&.four
+							.fas
+								left: 1rem
+								opacity: 1
+								font-size: 1.1rem
+					&:active
+						background: #539bc7
+// button slide style
+.button-slide
+	background: #16bac5
+	padding: 2rem 0
+	.container
+		.row
+			.col-lg-4
+				padding: 1rem 4rem
+				.button-slide
+					width: 100%
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 1rem
+					padding: 1rem 0
+					color: #EFE9F4
+					background: transparent
+					outline: none
+					border: 2px solid #EFE9F4
+					transition: .5s all ease-in-out
+					position: relative
+					z-index: 1
+					overflow: hidden
+					&.down
+						.fas
+							position: absolute
+							top: -3rem
+							left: 50%
+							transform: translateX(-50%)
+							transition: .5s all ease-in-out
+						.content
+							position: absolute
+							top: 0
+							left: 50%
+							transform: translate(-50%,20%)
+							width: 100%
+							transition: .5s all ease-in-out
+					&.left-to-right
+						.fas
+							position: absolute
+							top: 0
+							left: -3rem
+							transition: .5s all ease-in-out
+							transform: translateY(25%)
+						.content
+							position: absolute
+							top: 0
+							left: 50%
+							transform: translate(-50%,20%)
+							width: 100%
+							transition: .5s all ease-in-out
+					&:hover
+						&.down
+							padding-top: 2rem
+							.fas
+								top: .5rem
+							.content
+								top: 3rem
+						&.left-to-right
+							padding-top: 2rem
+							.fas
+								left: 50%
+								transform: translate(-50%,25%)
+							.content
+								left: 150%
+					&:active
+						background: #2980b9
+// font effect style
+.font-effect
+	padding: 2rem 0
+	background: #5FBFF9
+	.container
+		.row
+			.col-md-6
+				padding: 1rem 4rem
+				display: flex
+				justify-content: center
+				align-items: center
+				.button
+					width: 100%
+					@media only screen and (min-width: 768px)
+						width: 60%
+					outline: none
+					border: none
+					background: #16BAC5
+					text-transform: uppercase
+					font-weight: bold
+					color: white
+					font-size: 1.2rem
+					z-index: 1
+					box-shadow: 0 10px #171d1c82
+					position: relative
+					padding: 1rem
+					border-radius: 20px
+					transition: .5s all ease-in-out
+					overflow: hidden
+					.fas
+						margin-right: 20px
+						transition: .5s all ease-in-out
+					.content
+						transition: .2s all ease-in-out
+					&:hover
+						&.orderitem
+							.fas 
+								font-size: 2rem
+					&:active
+						&.orderitem
+							.fas
+								transform: translateX(1000%)
+							.content
+								opacity: 0
+						&.sendmessage
+							.fas
+								font-size: 1.5rem
+								opacity: 0
+
+
+
+

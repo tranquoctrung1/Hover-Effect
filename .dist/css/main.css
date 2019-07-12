@@ -245,7 +245,8 @@
           justify-content: center;
           align-items: center;
           padding: 0;
-          transition: .5s all ease-in-out; }
+          transition: .5s all ease-in-out;
+          background: #2980b9; }
           @media only screen and (min-width: 1024px) {
             .button-font .container .row .col-md-6 .button-font.star .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.star .row .col-lg-3 {
               border-right: 1px solid white; } }
@@ -258,10 +259,17 @@
       .button-font .container .row .col-md-6 .button-font.heart, .button-font .container .row .col-md-12 .button-font.heart {
         width: 25%;
         height: 8rem; }
+        @media only screen and (max-width: 767px) {
+          .button-font .container .row .col-md-6 .button-font.heart, .button-font .container .row .col-md-12 .button-font.heart {
+            width: 70%;
+            height: 4rem; } }
         .button-font .container .row .col-md-6 .button-font.heart .row, .button-font .container .row .col-md-12 .button-font.heart .row {
           height: 100%; }
           .button-font .container .row .col-md-6 .button-font.heart .row .col-12, .button-font .container .row .col-md-12 .button-font.heart .row .col-12 {
             padding: 1rem 0; }
+            @media only screen and (max-width: 767px) {
+              .button-font .container .row .col-md-6 .button-font.heart .row .col-12, .button-font .container .row .col-md-12 .button-font.heart .row .col-12 {
+                padding: 0; } }
             .button-font .container .row .col-md-6 .button-font.heart .row .col-12.heart, .button-font .container .row .col-md-12 .button-font.heart .row .col-12.heart {
               background: #2980b9; }
       .button-font .container .row .col-md-6 .button-font.cog .row, .button-font .container .row .col-md-12 .button-font.cog .row {
@@ -361,3 +369,169 @@
         transform: translateY(10%); }
         .button-font .container .row .col-md-6 .button-font:active.send:after, .button-font .container .row .col-md-12 .button-font:active.send:after {
           transform: rotate(-30deg) translate(70%, -30%); }
+
+.button-page-direction {
+  background: #5fbff9;
+  padding: 2rem 0; }
+  .button-page-direction .container .row .col-md-6 {
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .button-page-direction .container .row .col-md-6 .button-page {
+      width: 60%;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 1rem 0;
+      color: #EFE9F4;
+      background: transparent;
+      outline: none;
+      border: 2px solid #EFE9F4;
+      transition: .5s all ease-in-out;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      border-radius: 50px; }
+      @media only screen and (max-width: 1023px) {
+        .button-page-direction .container .row .col-md-6 .button-page {
+          width: 100%; } }
+      .button-page-direction .container .row .col-md-6 .button-page .fas {
+        padding: 5px;
+        position: absolute;
+        font-size: .5rem;
+        top: 50%;
+        left: 50%;
+        transition: .3s all ease-in-out;
+        opacity: 0; }
+      .button-page-direction .container .row .col-md-6 .button-page.one .fas {
+        transform: translate(200%, -50%); }
+      .button-page-direction .container .row .col-md-6 .button-page.three .fas {
+        transform: translate(0%, -45%);
+        right: -10rem; }
+      .button-page-direction .container .row .col-md-6 .button-page.two .fas {
+        transform: translate(-250%, -50%); }
+      .button-page-direction .container .row .col-md-6 .button-page.four .fas {
+        transform: translate(0%, -45%);
+        left: -5rem; }
+      .button-page-direction .container .row .col-md-6 .button-page:hover.one .fas {
+        transform: translate(266%, -50%);
+        opacity: 1;
+        font-size: 1.1rem; }
+      .button-page-direction .container .row .col-md-6 .button-page:hover.two .fas {
+        transform: translate(-377%, -50%);
+        opacity: 1;
+        font-size: 1.1rem; }
+      .button-page-direction .container .row .col-md-6 .button-page:hover.three .fas {
+        right: -3rem;
+        opacity: 1;
+        font-size: 1.1rem; }
+      .button-page-direction .container .row .col-md-6 .button-page:hover.four .fas {
+        left: 1rem;
+        opacity: 1;
+        font-size: 1.1rem; }
+      .button-page-direction .container .row .col-md-6 .button-page:active {
+        background: #539bc7; }
+
+.button-slide {
+  background: #16bac5;
+  padding: 2rem 0; }
+  .button-slide .container .row .col-lg-4 {
+    padding: 1rem 4rem; }
+    .button-slide .container .row .col-lg-4 .button-slide {
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 1rem 0;
+      color: #EFE9F4;
+      background: transparent;
+      outline: none;
+      border: 2px solid #EFE9F4;
+      transition: .5s all ease-in-out;
+      position: relative;
+      z-index: 1;
+      overflow: hidden; }
+      .button-slide .container .row .col-lg-4 .button-slide.down .fas {
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: .5s all ease-in-out; }
+      .button-slide .container .row .col-lg-4 .button-slide.down .content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        width: 100%;
+        transition: .5s all ease-in-out; }
+      .button-slide .container .row .col-lg-4 .button-slide.left-to-right .fas {
+        position: absolute;
+        top: 0;
+        left: -3rem;
+        transition: .5s all ease-in-out;
+        transform: translateY(25%); }
+      .button-slide .container .row .col-lg-4 .button-slide.left-to-right .content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        width: 100%;
+        transition: .5s all ease-in-out; }
+      .button-slide .container .row .col-lg-4 .button-slide:hover.down {
+        padding-top: 2rem; }
+        .button-slide .container .row .col-lg-4 .button-slide:hover.down .fas {
+          top: .5rem; }
+        .button-slide .container .row .col-lg-4 .button-slide:hover.down .content {
+          top: 3rem; }
+      .button-slide .container .row .col-lg-4 .button-slide:hover.left-to-right {
+        padding-top: 2rem; }
+        .button-slide .container .row .col-lg-4 .button-slide:hover.left-to-right .fas {
+          left: 50%;
+          transform: translate(-50%, 25%); }
+        .button-slide .container .row .col-lg-4 .button-slide:hover.left-to-right .content {
+          left: 150%; }
+      .button-slide .container .row .col-lg-4 .button-slide:active {
+        background: #2980b9; }
+
+.font-effect {
+  padding: 2rem 0;
+  background: #5FBFF9; }
+  .font-effect .container .row .col-md-6 {
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .font-effect .container .row .col-md-6 .button {
+      width: 100%;
+      outline: none;
+      border: none;
+      background: #16BAC5;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      font-size: 1.2rem;
+      z-index: 1;
+      box-shadow: 0 10px #171d1c82;
+      position: relative;
+      padding: 1rem;
+      border-radius: 20px;
+      transition: .5s all ease-in-out;
+      overflow: hidden; }
+      @media only screen and (min-width: 768px) {
+        .font-effect .container .row .col-md-6 .button {
+          width: 60%; } }
+      .font-effect .container .row .col-md-6 .button .fas {
+        margin-right: 20px;
+        transition: .5s all ease-in-out; }
+      .font-effect .container .row .col-md-6 .button .content {
+        transition: .2s all ease-in-out; }
+      .font-effect .container .row .col-md-6 .button:hover.orderitem .fas {
+        font-size: 2rem; }
+      .font-effect .container .row .col-md-6 .button:active.orderitem .fas {
+        transform: translateX(1000%); }
+      .font-effect .container .row .col-md-6 .button:active.orderitem .content {
+        opacity: 0; }
+      .font-effect .container .row .col-md-6 .button:active.sendmessage .fas {
+        font-size: 1.5rem;
+        opacity: 0; }
