@@ -579,7 +579,120 @@
 							.fas
 								font-size: 1.5rem
 								opacity: 0
-
-
-
-
+// font effect 2 style
+.font-effect2
+	padding: 2rem 0
+	background: #5FBFF9
+	.container
+		.row
+			.col-4, .col-6
+				display: flex
+				justify-content: center
+				align-items: center
+				.font
+					border: none
+					outline: 0
+					width: 30%
+					@media only screen and (max-width: 425px)
+						width: 100%
+					background: #16BAC5
+					text-transform: uppercase
+					font-weight: bold
+					color: white
+					font-size: 1.2rem
+					z-index: 1
+					box-shadow: 0 10px #171d1c82
+					position: relative
+					padding: 1rem
+					border-radius: 20px
+					transition: .1s all ease-in-out
+					.fas
+						transition: .3s all ease-in-out
+					.fas.overlay
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%,-50%)
+						transition: .3s all ease-in-out
+					&.two
+						.fas.overlay
+							top: -.1rem
+							color: yellow
+							font-size: 2rem
+							opacity: 0
+					&.three
+						.fas.overlay
+							color: #f5f6fa
+							opacity: 0
+							transition: .2s all ease-in-out
+					&.four
+						margin-top: 5rem
+						width: 15%
+						@media only screen and (max-width: 768px)
+							width: 50%
+						border-radius: 0 0 20px 20px
+						&:after
+							display: block
+							content: ''
+							position: absolute
+							width: 100%
+							height: 15px
+							top: 0
+							left: 0
+							background: #16bac5
+							border-radius: 20px 20px 0 0
+							transform: translateY(-100%)
+						.fas.fa-file
+							position: absolute
+							top: 0
+							right: -10rem
+							transition: .5s all ease-in-out
+							&.one
+								right: -10rem
+							&.two
+								right: -12rem
+							&.three
+								top: 2rem
+								right: -11rem
+					&.animate
+						&:after
+							animation: animate 1s alternate
+						.fas.fa-file
+							right: 50% !important
+							top: 0 !important
+							font-size: 0px
+					&:hover
+						&.one
+							.fas
+								color: #c0392b
+						&.two
+							.fas.overlay
+								top: 50%
+								font-size: 1.2rem
+								opacity: 1
+						&.three
+							.fas
+								color: #f5f6fa
+					&:active
+						transform: translateY(20%)
+						box-shadow: 0 5px #171d1c82
+						&.one
+							.fas.overlay
+								top: -.1rem
+								opacity: 0
+								font-size: 2rem
+						&.three
+							.fas
+								opacity: 0
+							.fas.overlay
+								opacity: 1
+						&.four
+							transform: translateY(0%)
+							box-shadow: 0 10px #171d1c82
+@keyframes animate
+	0%
+		transform: translateY(-100%)
+	50%
+		transform: translateY(-150%)
+	100%
+		transform: translateY(-100%)

@@ -535,3 +535,112 @@
       .font-effect .container .row .col-md-6 .button:active.sendmessage .fas {
         font-size: 1.5rem;
         opacity: 0; }
+
+.font-effect2 {
+  padding: 2rem 0;
+  background: #5FBFF9; }
+  .font-effect2 .container .row .col-4, .font-effect2 .container .row .col-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .font-effect2 .container .row .col-4 .font, .font-effect2 .container .row .col-6 .font {
+      border: none;
+      outline: 0;
+      width: 30%;
+      background: #16BAC5;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      font-size: 1.2rem;
+      z-index: 1;
+      box-shadow: 0 10px #171d1c82;
+      position: relative;
+      padding: 1rem;
+      border-radius: 20px;
+      transition: .1s all ease-in-out; }
+      @media only screen and (max-width: 425px) {
+        .font-effect2 .container .row .col-4 .font, .font-effect2 .container .row .col-6 .font {
+          width: 100%; } }
+      .font-effect2 .container .row .col-4 .font .fas, .font-effect2 .container .row .col-6 .font .fas {
+        transition: .3s all ease-in-out; }
+      .font-effect2 .container .row .col-4 .font .fas.overlay, .font-effect2 .container .row .col-6 .font .fas.overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s all ease-in-out; }
+      .font-effect2 .container .row .col-4 .font.two .fas.overlay, .font-effect2 .container .row .col-6 .font.two .fas.overlay {
+        top: -.1rem;
+        color: yellow;
+        font-size: 2rem;
+        opacity: 0; }
+      .font-effect2 .container .row .col-4 .font.three .fas.overlay, .font-effect2 .container .row .col-6 .font.three .fas.overlay {
+        color: #f5f6fa;
+        opacity: 0;
+        transition: .2s all ease-in-out; }
+      .font-effect2 .container .row .col-4 .font.four, .font-effect2 .container .row .col-6 .font.four {
+        margin-top: 5rem;
+        width: 15%;
+        border-radius: 0 0 20px 20px; }
+        @media only screen and (max-width: 768px) {
+          .font-effect2 .container .row .col-4 .font.four, .font-effect2 .container .row .col-6 .font.four {
+            width: 50%; } }
+        .font-effect2 .container .row .col-4 .font.four:after, .font-effect2 .container .row .col-6 .font.four:after {
+          display: block;
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 15px;
+          top: 0;
+          left: 0;
+          background: #16bac5;
+          border-radius: 20px 20px 0 0;
+          transform: translateY(-100%); }
+        .font-effect2 .container .row .col-4 .font.four .fas.fa-file, .font-effect2 .container .row .col-6 .font.four .fas.fa-file {
+          position: absolute;
+          top: 0;
+          right: -10rem;
+          transition: .5s all ease-in-out; }
+          .font-effect2 .container .row .col-4 .font.four .fas.fa-file.one, .font-effect2 .container .row .col-6 .font.four .fas.fa-file.one {
+            right: -10rem; }
+          .font-effect2 .container .row .col-4 .font.four .fas.fa-file.two, .font-effect2 .container .row .col-6 .font.four .fas.fa-file.two {
+            right: -12rem; }
+          .font-effect2 .container .row .col-4 .font.four .fas.fa-file.three, .font-effect2 .container .row .col-6 .font.four .fas.fa-file.three {
+            top: 2rem;
+            right: -11rem; }
+      .font-effect2 .container .row .col-4 .font.animate:after, .font-effect2 .container .row .col-6 .font.animate:after {
+        animation: animate 1s alternate; }
+      .font-effect2 .container .row .col-4 .font.animate .fas.fa-file, .font-effect2 .container .row .col-6 .font.animate .fas.fa-file {
+        right: 50% !important;
+        top: 0 !important;
+        font-size: 0px; }
+      .font-effect2 .container .row .col-4 .font:hover.one .fas, .font-effect2 .container .row .col-6 .font:hover.one .fas {
+        color: #c0392b; }
+      .font-effect2 .container .row .col-4 .font:hover.two .fas.overlay, .font-effect2 .container .row .col-6 .font:hover.two .fas.overlay {
+        top: 50%;
+        font-size: 1.2rem;
+        opacity: 1; }
+      .font-effect2 .container .row .col-4 .font:hover.three .fas, .font-effect2 .container .row .col-6 .font:hover.three .fas {
+        color: #f5f6fa; }
+      .font-effect2 .container .row .col-4 .font:active, .font-effect2 .container .row .col-6 .font:active {
+        transform: translateY(20%);
+        box-shadow: 0 5px #171d1c82; }
+        .font-effect2 .container .row .col-4 .font:active.one .fas.overlay, .font-effect2 .container .row .col-6 .font:active.one .fas.overlay {
+          top: -.1rem;
+          opacity: 0;
+          font-size: 2rem; }
+        .font-effect2 .container .row .col-4 .font:active.three .fas, .font-effect2 .container .row .col-6 .font:active.three .fas {
+          opacity: 0; }
+        .font-effect2 .container .row .col-4 .font:active.three .fas.overlay, .font-effect2 .container .row .col-6 .font:active.three .fas.overlay {
+          opacity: 1; }
+        .font-effect2 .container .row .col-4 .font:active.four, .font-effect2 .container .row .col-6 .font:active.four {
+          transform: translateY(0%);
+          box-shadow: 0 10px #171d1c82; }
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%); }
+  50% {
+    transform: translateY(-150%); }
+  100% {
+    transform: translateY(-100%); } }
