@@ -26,3 +26,5 @@
 
 ###### **3/ Chạy lên web  dùng lệnh** 
 ###### **npm start hay là gulp**
+
+##### Để xem code html và css thì vào thư mục .dist
