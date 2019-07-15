@@ -255,7 +255,7 @@
 								background: #5FBFF9
 								transition: .5s all ease-in-out
 								.cart
-									padding: 5px
+									padding-bottom: 5px
 					&.star
 						.row
 							height: 100%
@@ -689,6 +689,113 @@
 						&.four
 							transform: translateY(0%)
 							box-shadow: 0 10px #171d1c82
+// Button rotate 3d
+.rotate-3d-button
+	background: #16bac5
+	padding: 2rem 0
+	.container
+		.row
+			.col-12
+				display: flex
+				justify-content: center
+				align-items: center
+				.button-3d
+					width: 30%
+					text-transform: uppercase
+					font-weight: bold
+					font-size: 1rem
+					padding: 2rem 0
+					color: #EFE9F4
+					background: transparent
+					outline: none
+					border: none
+					transition: .5s all ease-in-out
+					position: relative
+					z-index: 1
+					transform-style: preserve-3d
+					&:before
+						content: 'Ok! Nice'
+						display: flex
+						justify-content: center
+						align-items: center
+						position: absolute
+						top: 0
+						left: 0
+						background: #2980b9
+						height: 100%
+						width: 100%
+						transition: .3s all ease-in-out
+						transform-origin: top
+						transform: translateY(100%) rotateX(90deg)
+					&:after
+						content: attr(value)
+						display: flex
+						justify-content: center
+						align-items: center
+						position: absolute
+						top: 0
+						left: 0
+						background: #5fbff9
+						height: 100%
+						width: 100%
+						transition: .3s all ease-in-out
+						transform-origin: bottom
+						transform: translateY(0%) rotateX(0deg)
+					&.two
+						margin-top: 1rem
+						&:before
+							transform-origin: right
+							transform: translateX(-100%) rotateY(90deg)
+						&:after
+							transform-origin: left
+							transform: translateX(0%) rotateY(0deg)
+					&:hover
+						&:before
+							transform: translateY(0%) rotateX(0deg)
+						&:after
+							transform: translateY(-100%) rotateX(90deg)
+						&.two
+							&:before
+								transform: translateX(0%) rotateY(0deg)
+							&:after
+								transform: translateX(100%) rotateY(90deg)
+// Clip path style
+.clip-path
+	padding: 2rem 0
+	background: #5FBFF9
+	.container
+		.row
+			.col-12
+				display: flex
+				justify-content: center
+				align-items: center
+				color: white
+				font-weight: bold
+				.inner
+					width: 40%
+					@media only screen and (max-width: 768px)
+						width: 100%
+					background: #3b6d88
+					padding: 2rem
+					border-radius: 10px
+					position: relative
+					transition: .5s all ease-in-out
+					clip-path: circle(5% at 95% 20%)
+					cursor: pointer
+					.infor
+						position: absolute
+						transition: .5s all ease-in-out
+						top: 11.5%
+						right: 4.5%
+					.hello
+						font-size: 1.2rem
+					.content
+						font-size: .8rem
+					&:hover
+						clip-path: circle(75%)
+						background: #16bac5
+						.infor
+							opacity: 0
 @keyframes animate
 	0%
 		transform: translateY(-100%)

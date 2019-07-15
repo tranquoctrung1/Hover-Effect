@@ -1,8 +1,14 @@
 .header {
-  color: #636e72; }
+  color: #636e72;
+  padding-top: 1rem; }
+  .header h3 {
+    font-size: 2.4rem; }
+  .header p {
+    font-size: 1.5rem; }
 
 .footer {
-  color: #636e72; }
+  color: #636e72;
+  padding-top: 1rem; }
 
 .button-effect {
   background: #16BAC5;
@@ -237,7 +243,7 @@
           background: #5FBFF9;
           transition: .5s all ease-in-out; }
           .button-font .container .row .col-md-6 .button-font.add-to-cart .row .col-lg-9 .cart, .button-font .container .row .col-md-12 .button-font.add-to-cart .row .col-lg-9 .cart {
-            padding: 5px; }
+            padding-bottom: 5px; }
       .button-font .container .row .col-md-6 .button-font.star .row, .button-font .container .row .col-md-12 .button-font.star .row {
         height: 100%; }
         .button-font .container .row .col-md-6 .button-font.star .row .col-lg-3, .button-font .container .row .col-md-12 .button-font.star .row .col-lg-3 {
@@ -636,6 +642,108 @@
         .font-effect2 .container .row .col-4 .font:active.four, .font-effect2 .container .row .col-6 .font:active.four {
           transform: translateY(0%);
           box-shadow: 0 10px #171d1c82; }
+
+.rotate-3d-button {
+  background: #16bac5;
+  padding: 2rem 0; }
+  .rotate-3d-button .container .row .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .rotate-3d-button .container .row .col-12 .button-3d {
+      width: 30%;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 2rem 0;
+      color: #EFE9F4;
+      background: transparent;
+      outline: none;
+      border: none;
+      transition: .5s all ease-in-out;
+      position: relative;
+      z-index: 1;
+      transform-style: preserve-3d; }
+      .rotate-3d-button .container .row .col-12 .button-3d:before {
+        content: 'Ok! Nice';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2980b9;
+        height: 100%;
+        width: 100%;
+        transition: .3s all ease-in-out;
+        transform-origin: top;
+        transform: translateY(100%) rotateX(90deg); }
+      .rotate-3d-button .container .row .col-12 .button-3d:after {
+        content: attr(value);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #5fbff9;
+        height: 100%;
+        width: 100%;
+        transition: .3s all ease-in-out;
+        transform-origin: bottom;
+        transform: translateY(0%) rotateX(0deg); }
+      .rotate-3d-button .container .row .col-12 .button-3d.two {
+        margin-top: 1rem; }
+        .rotate-3d-button .container .row .col-12 .button-3d.two:before {
+          transform-origin: right;
+          transform: translateX(-100%) rotateY(90deg); }
+        .rotate-3d-button .container .row .col-12 .button-3d.two:after {
+          transform-origin: left;
+          transform: translateX(0%) rotateY(0deg); }
+      .rotate-3d-button .container .row .col-12 .button-3d:hover:before {
+        transform: translateY(0%) rotateX(0deg); }
+      .rotate-3d-button .container .row .col-12 .button-3d:hover:after {
+        transform: translateY(-100%) rotateX(90deg); }
+      .rotate-3d-button .container .row .col-12 .button-3d:hover.two:before {
+        transform: translateX(0%) rotateY(0deg); }
+      .rotate-3d-button .container .row .col-12 .button-3d:hover.two:after {
+        transform: translateX(100%) rotateY(90deg); }
+
+.clip-path {
+  padding: 2rem 0;
+  background: #5FBFF9; }
+  .clip-path .container .row .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold; }
+    .clip-path .container .row .col-12 .inner {
+      width: 40%;
+      background: #3b6d88;
+      padding: 2rem;
+      border-radius: 10px;
+      position: relative;
+      transition: .5s all ease-in-out;
+      clip-path: circle(5% at 95% 20%);
+      cursor: pointer; }
+      @media only screen and (max-width: 768px) {
+        .clip-path .container .row .col-12 .inner {
+          width: 100%; } }
+      .clip-path .container .row .col-12 .inner .infor {
+        position: absolute;
+        transition: .5s all ease-in-out;
+        top: 11.5%;
+        right: 4.5%; }
+      .clip-path .container .row .col-12 .inner .hello {
+        font-size: 1.2rem; }
+      .clip-path .container .row .col-12 .inner .content {
+        font-size: .8rem; }
+      .clip-path .container .row .col-12 .inner:hover {
+        clip-path: circle(75%);
+        background: #16bac5; }
+        .clip-path .container .row .col-12 .inner:hover .infor {
+          opacity: 0; }
 
 @keyframes animate {
   0% {
