@@ -771,6 +771,8 @@
 				align-items: center
 				color: white
 				font-weight: bold
+				&.two
+					margin-top: 1rem
 				.inner
 					width: 40%
 					@media only screen and (max-width: 768px)
@@ -791,11 +793,19 @@
 						font-size: 1.2rem
 					.content
 						font-size: .8rem
+					&.two
+						clip-path: inset(0 98% 0 0)
 					&:hover
 						clip-path: circle(75%)
 						background: #16bac5
 						.infor
 							opacity: 0
+						&.two
+							clip-path: inset(0 0 0 0)
+			// &:hover
+			// 	.inner.two
+			// 		clip-path: inset(0 0 0 0)
+
 @keyframes animate
 	0%
 		transform: translateY(-100%)

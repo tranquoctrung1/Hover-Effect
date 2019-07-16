@@ -718,6 +718,8 @@
     align-items: center;
     color: white;
     font-weight: bold; }
+    .clip-path .container .row .col-12.two {
+      margin-top: 1rem; }
     .clip-path .container .row .col-12 .inner {
       width: 40%;
       background: #3b6d88;
@@ -739,11 +741,15 @@
         font-size: 1.2rem; }
       .clip-path .container .row .col-12 .inner .content {
         font-size: .8rem; }
+      .clip-path .container .row .col-12 .inner.two {
+        clip-path: inset(0 98% 0 0); }
       .clip-path .container .row .col-12 .inner:hover {
         clip-path: circle(75%);
         background: #16bac5; }
         .clip-path .container .row .col-12 .inner:hover .infor {
           opacity: 0; }
+        .clip-path .container .row .col-12 .inner:hover.two {
+          clip-path: inset(0 0 0 0); }
 
 @keyframes animate {
   0% {
