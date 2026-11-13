@@ -1,0 +1,138 @@
+// Sticky section nav, section heads + copy button, toast, dark theme.
+// Plain declarations always before nested rules (Dart Sass keeps source order).
+
+.fx-nav
+	position: sticky
+	top: 0
+	z-index: 100
+	background: rgba(255, 255, 255, .92)
+	backdrop-filter: blur(6px)
+	border-bottom: 1px solid #dfe6e9
+	.container
+		display: flex
+		align-items: center
+		gap: .5rem
+	.fx-theme
+		flex: none
+		width: 2.5rem
+		height: 2.5rem
+		border: none
+		border-radius: 50%
+		background: transparent
+		color: #636e72
+		font-size: 1.1rem
+		cursor: pointer
+		transition: .2s all ease-in-out
+		&:hover
+			background: #dfe6e9
+
+.fx-nav-links
+	display: flex
+	flex: 1
+	gap: .25rem
+	margin: 0
+	padding: .5rem 0
+	list-style: none
+	overflow-x: auto
+	scrollbar-width: thin
+	a
+		display: block
+		padding: .35rem .8rem
+		border-radius: 999px
+		color: #636e72
+		font-weight: 500
+		white-space: nowrap
+		text-decoration: none
+		transition: .2s all ease-in-out
+		&:hover
+			background: #dfe6e9
+			text-decoration: none
+		&.is-current
+			background: #16bac5
+			color: #fff
+
+section[id]
+	scroll-margin-top: 3.5rem
+	&:focus
+		outline: none
+
+.fx-head
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 1rem
+	padding: 0 15px 1rem
+	color: #EFE9F4
+	h2
+		margin: 0
+		font-size: 1.25rem
+		font-weight: bold
+		text-transform: uppercase
+		letter-spacing: .05em
+		text-align: left
+
+.fx-copy
+	flex: none
+	padding: .35rem .9rem
+	border: 1px solid rgba(239, 233, 244, .6)
+	border-radius: 999px
+	background: rgba(0, 0, 0, .15)
+	color: #EFE9F4
+	font-size: .85rem
+	cursor: pointer
+	transition: .2s all ease-in-out
+	i
+		margin-right: .4rem
+	&:hover, &:focus-visible
+		background: #EFE9F4
+		color: #2d3436
+
+.fx-toast
+	position: fixed
+	left: 50%
+	bottom: 1.5rem
+	z-index: 200
+	padding: .6rem 1.2rem
+	border-radius: 999px
+	background: #2d3436
+	color: #fff
+	opacity: 0
+	pointer-events: none
+	transform: translate(-50%, 1rem)
+	transition: .25s all ease-in-out
+	&.is-shown
+		opacity: 1
+		transform: translate(-50%, 0)
+
+// Dark theme: html[data-theme="dark"] set by inline head script.
+[data-theme="dark"]
+	color-scheme: dark
+	body
+		background: #1e272e
+	.header, .footer
+		color: #b2bec3
+	.fx-nav
+		background: rgba(30, 39, 46, .92)
+		border-bottom-color: #2d3436
+		.fx-theme
+			color: #ffeaa7
+			&:hover
+				background: #2d3436
+	.fx-nav-links a
+		color: #b2bec3
+		&:hover
+			background: #2d3436
+		&.is-current
+			background: #0e6b72
+			color: #fff
+	.button-effect, .button-font, .button-slide, .rotate-3d-button
+		background: #0e6b72
+	.button-click, .button-page-direction, .font-effect, .font-effect2, .clip-path
+		background: #22618a
+	#scroll-top
+		background: #2d3436
+		a
+			color: #dfe6e9
+	.fx-toast
+		background: #dfe6e9
+		color: #2d3436
