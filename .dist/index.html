@@ -10,7 +10,19 @@
     <meta name="msapplication-navbutton-color" content="#000000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
     <title>Button Effect</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;amp;subset=vietnamese" rel="stylesheet">
+    <script>
+      (function () {
+      	var t;
+      	try { t = localStorage.getItem('theme'); } catch (e) {}
+      	if (t !== 'dark' && t !== 'light') {
+      		t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      	}
+      	document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=vietnamese&amp;display=swap" rel="stylesheet">
     <meta name="description" content="Description for Button Effect page">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback">
@@ -88,8 +100,29 @@
     </header><!-- ////////////// End Header ////////////// -->
 <!-- ////////////// Begin Main ////////////// -->
     <main>
-      <section class="button-effect">
+      <nav class="fx-nav" aria-label="Effect sections">
         <div class="container">
+          <ul class="fx-nav-links">
+            <li><a href="#button-effect">Hover</a></li>
+            <li><a href="#button-click">Click</a></li>
+            <li><a href="#button-font">Icon</a></li>
+            <li><a href="#button-page-direction">Direction</a></li>
+            <li><a href="#button-slide">Slide</a></li>
+            <li><a href="#font-effect">Icon text</a></li>
+            <li><a href="#font-effect2">Icon swap</a></li>
+            <li><a href="#rotate-3d-button">3D</a></li>
+            <li><a href="#clip-path">Clip-path</a></li>
+            <li><a href="#button-new">New</a></li>
+          </ul>
+          <button class="fx-theme" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button>
+        </div>
+      </nav>
+      <section class="button-effect" id="button-effect">
+        <div class="container">
+          <div class="fx-head">
+            <h2>Hover fill</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Hover fill"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <button class="button one">Button</button>
@@ -112,8 +145,12 @@
           </div>
         </div>
       </section>
-      <section class="button-click">
+      <section class="button-click" id="button-click">
         <div class="container">
+          <div class="fx-head">
+            <h2>Click press</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Click press"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-md-6">
               <button class="button-click one">Button</button>
@@ -142,8 +179,12 @@
           </div>
         </div>
       </section>
-      <section class="button-font">
+      <section class="button-font" id="button-font">
         <div class="container">
+          <div class="fx-head">
+            <h2>Icon buttons</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Icon buttons"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-md-6">
               <button class="button-font add-to-cart">
@@ -212,8 +253,12 @@
           </div>
         </div>
       </section>
-      <section class="button-page-direction">
+      <section class="button-page-direction" id="button-page-direction">
         <div class="container">
+          <div class="fx-head">
+            <h2>Direction</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Direction"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-md-6">
               <button class="button-page one">
@@ -232,8 +277,12 @@
           </div>
         </div>
       </section>
-      <section class="button-slide">
+      <section class="button-slide" id="button-slide">
         <div class="container">
+          <div class="fx-head">
+            <h2>Slide</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Slide"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <button class="button-slide down">
@@ -271,8 +320,12 @@
           </div>
         </div>
       </section>
-      <section class="font-effect">
+      <section class="font-effect" id="font-effect">
         <div class="container">
+          <div class="fx-head">
+            <h2>Icon text</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Icon text"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-md-6">
               <button class="button orderitem">
@@ -287,8 +340,12 @@
           </div>
         </div>
       </section>
-      <section class="font-effect2">
+      <section class="font-effect2" id="font-effect2">
         <div class="container">
+          <div class="fx-head">
+            <h2>Icon swap</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Icon swap"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-4">
               <button class="font one">
@@ -319,8 +376,12 @@
           </div>
         </div>
       </section>
-      <section class="rotate-3d-button text-center">
+      <section class="rotate-3d-button text-center" id="rotate-3d-button">
         <div class="container">
+          <div class="fx-head">
+            <h2>3D rotate</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: 3D rotate"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-12">
               <button class="button-3d" value="Button"></button>
@@ -331,8 +392,12 @@
           </div>
         </div>
       </section>
-      <section class="clip-path">
+      <section class="clip-path" id="clip-path">
         <div class="container">
+          <div class="fx-head">
+            <h2>Clip-path</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: Clip-path"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
           <div class="row">
             <div class="col-12">
               <div class="inner"><span class="infor">i</span>
@@ -349,15 +414,48 @@
           </div>
         </div>
       </section>
+      <section class="button-new" id="button-new">
+        <div class="container">
+          <div class="fx-head">
+            <h2>New effects</h2>
+            <button class="fx-copy" type="button" aria-label="Copy code: New effects"><i class="fas fa-code" aria-hidden="true"></i><span>Copy code</span></button>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-ripple" type="button">Ripple</button>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-neon" type="button">Neon</button>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-gradient" type="button">Gradient</button>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-loading" type="button"><span class="fx-spinner" aria-hidden="true"></span><span class="fx-label">Submit</span></button>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-tilt" type="button">Tilt</button>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-magnet" type="button">Magnetic</button>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-shine" type="button">Shine</button>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <button class="fx-btn fx-glitch" type="button" aria-label="Glitch"><span class="fx-glitch-text" data-text="Glitch" aria-hidden="true">Glitch</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main><!-- ////////////// End Main ////////////// -->
 <!-- ////////////// Footer ////////////// -->
     <footer class="text-center footer">
       <h3>I hope you like this page</h3>
       <p>I will create some effect such as: img, input, slider and bla... bla... bla</p>
     </footer>
-    <div id="scroll-top" style="background: white; width: 100px; height: 50px; position: fixed; bottom: 10px; right: 10px; text-align:center; border-radius: 10px; opacity: 0"><a href="#top" style="font-size: 30px; color: #2d3436; font-weight: bold; text-decoration: none">Top</a></div><!-- ////////////// End Footer ////////////// -->
+    <div id="scroll-top"><a href="#top">Top</a></div><!-- ////////////// End Footer ////////////// -->
 <!-- ////////////// Javascript Include ////////////// -->
-    <script src="./js/thuvien.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
   </body>
 </html>

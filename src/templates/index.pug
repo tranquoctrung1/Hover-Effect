@@ -5,9 +5,28 @@ block variables
 	- var title = 'Button Effect'
 	- var description = 'Description for Button Effect page'
 	- var bodyclass = 'Button Effect'
+
+//- Tiêu đề section + nút copy code (nằm ngoài .row để không dính selector cũ)
+mixin head(title)
+	.fx-head
+		h2= title
+		button.fx-copy(type="button", aria-label="Copy code: " + title)
+			i.fas.fa-code(aria-hidden="true")
+			span Copy code
+
 block body
-	section.button-effect
+	- var navItems = [['button-effect','Hover'],['button-click','Click'],['button-font','Icon'],['button-page-direction','Direction'],['button-slide','Slide'],['font-effect','Icon text'],['font-effect2','Icon swap'],['rotate-3d-button','3D'],['clip-path','Clip-path'],['button-new','New']]
+	nav.fx-nav(aria-label="Effect sections")
 		.container
+			ul.fx-nav-links
+				each item in navItems
+					li
+						a(href="#" + item[0])= item[1]
+			button#theme-toggle.fx-theme(type="button", aria-label="Dark mode", aria-pressed="false")
+				i.fas.fa-moon(aria-hidden="true")
+	section.button-effect#button-effect
+		.container
+			+head('Hover fill')
 			.row
 				.col-lg-4.col-md-6
 					button.button.one Button
@@ -21,8 +40,9 @@ block body
 					button.button.five Button
 				.col-lg-4.col-md-6
 					button.button.six Button 
-	section.button-click
+	section.button-click#button-click
 		.container
+			+head('Click press')
 			.row
 				.col-md-6
 					button.button-click.one Button
@@ -40,8 +60,9 @@ block body
 					button.button-click.seven Yes
 				.col-md-6
 					button.button-click.eight No
-	section.button-font
+	section.button-font#button-font
 		.container
+			+head('Icon buttons')
 			.row
 				.col-md-6
 					button.button-font.add-to-cart
@@ -80,8 +101,9 @@ block body
 								.send-data Send data
 							.col-lg-3
 								.fas.fa-arrow-right.fa-lg
-	section.button-page-direction
+	section.button-page-direction#button-page-direction
 		.container
+			+head('Direction')
 			.row
 				.col-md-6
 					button.button-page.one 
@@ -99,8 +121,9 @@ block body
 					button.button-page.four
 						i.fas.fa-arrow-left
 						|Return
-	section.button-slide
+	section.button-slide#button-slide
 		.container
+			+head('Slide')
 			.row
 				.col-lg-4.col-md-6
 					button.button-slide.down
@@ -126,8 +149,9 @@ block body
 					button.button-slide.left-to-right
 						.fas.fa-cog.fa-2x
 						span.content Settings
-	section.font-effect
+	section.font-effect#font-effect
 		.container
+			+head('Icon text')
 			.row
 				.col-md-6
 					button.button.orderitem
@@ -137,8 +161,9 @@ block body
 					button.button.sendmessage
 						.fas.fa-envelope
 						span.content Send Message
-	section.font-effect2
+	section.font-effect2#font-effect2
 		.container
+			+head('Icon swap')
 			.row
 				.col-4
 					button.font.one
@@ -158,15 +183,17 @@ block body
 						.fas.fa-file.one
 						.fas.fa-file.two
 						.fas.fa-file.three
-	section.rotate-3d-button.text-center
+	section.rotate-3d-button.text-center#rotate-3d-button
 		.container
+			+head('3D rotate')
 			.row
 				.col-12
 					button(value="Button").button-3d
 				.col-12
 					button(value="Button").button-3d.two
-	section.clip-path
+	section.clip-path#clip-path
 		.container
+			+head('Clip-path')
 			.row
 				.col-12
 					.inner
@@ -177,3 +204,26 @@ block body
 					.inner.two
 						div.hello Hello Guys
 						p.content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit unde autem magni pariatur odit
+	section.button-new#button-new
+		.container
+			+head('New effects')
+			.row
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-ripple(type="button") Ripple
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-neon(type="button") Neon
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-gradient(type="button") Gradient
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-loading(type="button")
+						span.fx-spinner(aria-hidden="true")
+						span.fx-label Submit
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-tilt(type="button") Tilt
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-magnet(type="button") Magnetic
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-shine(type="button") Shine
+				.col-lg-3.col-md-6
+					button.fx-btn.fx-glitch(type="button", aria-label="Glitch")
+						span.fx-glitch-text(data-text="Glitch", aria-hidden="true") Glitch
